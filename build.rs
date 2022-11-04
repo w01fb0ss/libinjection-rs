@@ -59,10 +59,6 @@ fn main() {
         panic!("unable to clone libinjection");
     }
 
-    if fix_python_version().is_none() {
-        panic!("unable to fix python version");
-    }
-
     build_parent_dir.push("src");
     if !run_make("all", build_parent_dir.as_path()) {
         panic!("unable to make libinjection");
